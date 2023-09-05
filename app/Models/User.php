@@ -10,11 +10,11 @@ class User extends Eloquent
     protected $collection = 'users'; 
     protected $primaryKey = '_id'; 
     protected $fillable = [
-        'name_1',
-        'email_unique_index_1',
-        'phone_1',
-        'email_verified_at_1',
-        'password_1'
+        'name',
+        'email',
+        'phone',
+        'email_verified_at',
+        'password'
     ];
     
 }

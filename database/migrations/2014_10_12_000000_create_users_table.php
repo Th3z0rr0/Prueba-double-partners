@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->index('name');
-            $table->string('email')->unique('email_unique_index');
+            $table->index('email');
             $table->index('phone');
             $table->index('email_verified_at')->nullable();
             $table->index('password');
