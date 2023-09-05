@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\OrderController;
 
 
 /*
@@ -16,9 +17,9 @@ use App\Http\Controllers\UserController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('users.index');
 });
 
 Route::resource('users', UserController::class);
+Route::resource('orders', OrderController::class);
 
-Route::get('/users', [UserController::class, 'index']);
